@@ -1,0 +1,63 @@
+<? include "header.html" ?>
+<? include "../analytics.html" ?>
+</head>
+<? include "gnb.html" ?>
+<!-- //header -->
+
+<!-- section -->
+<section id="community" class="tables">
+    <div class="section banner" id="Banner">
+        <div class="InBox">
+            <h2 class="ttls">
+                <span> CHECK THE&nbsp;<b>NOTICE</b></span>
+                <strong>NOTICE</strong>
+            </h2>
+        </div>
+    </div>
+    <div class="section contents">
+        <div class="InBox">
+            <ul class="snb">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">문의사항</a></li>
+            </ul>
+            <div class="frame">
+                <h3><strong>공지사항</strong><span>공지사항과 다양한 소식을 확인해보세요.</span></h3>
+                <iframe src="/board/bbs/board.php?bo_table=notice_" width='100%' height='1200' frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- //section -->
+
+<script type="text/javascript">
+    $(function(){
+        //direct
+        <? if($_GET['table']=='notice'){ ?>
+            $(".section .snb > li").removeClass("active");
+            $(".section .snb > li").eq(0).addClass("active");
+            $("#Banner .ttls b").text("NOTICE");
+            $("#Banner .ttls strong").text("NOTICE");
+    
+            $(".frame h3 strong").text("공지사항");
+            $(".frame h3 span").text("공지사항과 다양한 소식을 확인해보세요.");
+            $(".frame iframe").attr("src","/board/bbs/board.php?bo_table=notice_");
+        
+        <? }else if($_GET['table']=='qna'){ ?>
+			$(".contents .snb > li").removeClass("active"); 
+			$(".contents .snb > li").eq(1).addClass("active");
+			$("#Banner .ttls b").text("Q&A");
+            $("#Banner .ttls strong").text("Q&A");
+    
+            $(".frame h3 strong").text("문의사항");
+            $(".frame h3 span").text("아이놀터에 무엇이든 물어보세요.");
+			$(".frame iframe").attr("src","/board/bbs/board.php?bo_table=qna_");
+
+		<? } ?>
+    });
+</script>
+
+
+<!-- //footer -->	
+<? include "footer.html" ?>
+<!-- //footer -->

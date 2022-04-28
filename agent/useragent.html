@@ -1,0 +1,7 @@
+<?
+$userAgent = $_SERVER['HTTP_USER_AGENT'];
+if (preg_match("/iPhone|iPad|Mobile|UP.Browser|Android|BlackBerry|Windows CE|Nokia|webOS|Opera Mini|SonyEricsson|opera mobi|Windows Phone|IEMobile|POLARIS/", $userAgent) != false){
+    echo '<meta http-equiv="refresh" content="0; url=m/index.html">';
+    echo "<script>document.location.replace('m/index.html');</script>";
+}
+?>

@@ -1,0 +1,61 @@
+<?
+$userAgent = $_SERVER['HTTP_USER_AGENT'];
+if (preg_match("/iPhone|iPad|Mobile|UP.Browser|Android|BlackBerry|Windows CE|Nokia|webOS|Opera Mini|SonyEricsson|opera mobi|Windows Phone|IEMobile|POLARIS/", $userAgent) != false){
+    echo "<script>document.location.replace('m/rooms.html?num=01');</script>";
+}
+?>
+
+<!DOCTYPE html>
+<html lang="ko" data-useragent="">
+<head>
+<meta charset="UTF-8">
+<? include "agent/keywords.html" ?>
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/swipers.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://player.vimeo.com/api/player.js"></script>
+
+<script type="text/javascript" src="js/modify.js" defer></script>
+<script type="text/javascript" src="js/swiper.js" defer></script>
+<script type="text/javascript" src="js/common.js" defer></script>
+
+<!-- analytics -->
+<? include "analytics.html" ?>
+<!-- //analytics -->
+</head>
+
+<body id="rooms" class="detail rooms">
+	
+	<!-- header -->
+	<? include "header.html" ?>
+	<!-- //header -->	
+
+	<section>
+		
+		<div class="section" id="visual">
+			<div id="scroll"><a href="#"><img src="images/scroll.png" width="40" height="145" alt="" /></a></div>
+		</div>
+		<div class="section notices"></div>
+		<div class="section contents"></div>
+		<div class="section room_menu">
+			<div class="InBox">
+				<div class="swiper-container swiper">
+					<div class="swiper-wrapper swiper-image roomLists"></div>
+					<div id="nav">
+						<div class="swiper-button-next btn-next swiper-btn"></div>
+						<div class="swiper-button-prev btn-prev swiper-btn"></div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- footer -->
+	<? include "footer.html" ?>
+	<!-- //footer -->
+</body>
+</html>
