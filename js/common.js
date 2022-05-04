@@ -15,24 +15,61 @@ let detailPath = ((location.href.substr(location.href.lastIndexOf("=") + 1)).sli
 
 /*---------------------------------------------------------------*/	
 //header - GNB
-$("#lnb .InBox ul li, #IdxMenu .lnb .InBox ul li, header > nav > div").hover(function(){
-	var i = $(this).index();
-	$("#lnb .InBox ul li").removeClass("on");
-	$("#lnb .InBox ul li").eq(i).addClass("on");
-	$("#IdxMenu .lnb .InBox ul li").removeClass("on");
-	$("#IdxMenu .lnb .InBox ul li").eq(i).addClass("on");
 
-	$("header > nav").css({"height":"380px"});
-	$("header > nav > div").css({"opacity":"0","z-index":"1"});
-	$("header > nav > div").eq(i).css({"opacity":"1","z-index":"2"});
-});	
 
-$("#lnb, #IdxMenu, header > nav").mouseleave(function(){
-	$("#lnb .InBox ul li").removeClass("on");
-	$("#IdxMenu .lnb .InBox ul li").removeClass("on");
-	$("header > nav > div").css({"opacity":"0","z-index":"1"});
-	$("header > nav").css({"height":"0"});
-});
+if(window.innerWidth < 768) {  
+	$("hgroup #lnb ul li a,#IdxMenu .lnb ul li a").on("click",function(){
+		var i = $(this).parent("li").index();
+		if($(this).parent("li").is(".on") === true){
+			$("hgroup #lnb ul li").removeClass("on");
+			$("#IdxMenu .lnb ul li").removeClass("on");
+			$("header > nav").css({"height":"0"});
+			$("header > nav > div").css({"opacity":"0","z-index":"1"});		
+		}else{
+			$("hgroup #lnb ul li").removeClass("on");
+			$("hgroup #lnb ul li").eq(i).addClass("on");
+			$("#IdxMenu .lnb ul li").removeClass("on");
+			$("#IdxMenu .lnb ul li").eq(i).addClass("on");
+			$("header > nav").css({"height":"500px"});
+			$("header > nav > div").css({"opacity":"0","z-index":"1"});
+			$("header > nav > div").eq(i).css({"opacity":"1","z-index":"2"});
+		}	
+		return false;
+	});
+	
+	$(window).on("scroll",function(){
+		if($("hgroup #lnb ul li").is(".on") === true || $("#IdxMenu .lnb ul li").is(".on") === true){
+			$("hgroup #lnb ul li").removeClass("on");
+			$("#IdxMenu .lnb ul li").removeClass("on");
+			$("header > nav").css({"height":"0"});
+			$("header > nav > div").css({"opacity":"0","z-index":"1"});
+		}
+	});	
+	
+	
+
+} else {
+	$("#lnb .InBox ul li, #IdxMenu .lnb .InBox ul li, header > nav > div").hover(function(){
+		var i = $(this).index();
+		$("#lnb .InBox ul li").removeClass("on");
+		$("#lnb .InBox ul li").eq(i).addClass("on");
+		$("#IdxMenu .lnb .InBox ul li").removeClass("on");
+		$("#IdxMenu .lnb .InBox ul li").eq(i).addClass("on");
+	
+		$("header > nav").css({"height":"380px"});
+		$("header > nav > div").css({"opacity":"0","z-index":"1"});
+		$("header > nav > div").eq(i).css({"opacity":"1","z-index":"2"});
+	});	
+	
+	$("#lnb, #IdxMenu, header > nav").mouseleave(function(){
+		$("#lnb .InBox ul li").removeClass("on");
+		$("#IdxMenu .lnb .InBox ul li").removeClass("on");
+		$("header > nav > div").css({"opacity":"0","z-index":"1"});
+		$("header > nav").css({"height":"0"});
+	});
+}
+
+
 
 /*---------------------------------------------------------------*/	
 //body
@@ -113,7 +150,15 @@ switch(path){
 			$(".section").eq(e).find("h3 span").css({"opacity":"1","transform":"translateX(115px)"});
 			$(".section").eq(e).find("h3 strong").css({"opacity":"1","transform":"translateX(140px)"});
 			$(".section").eq(e).find("p span").css({"opacity":"1","transform":"translateY(0)"});
+
+			if(window.innerWidth < 768) { 
+				$(".section").eq(e).find("h3 strong").css({"opacity":"1","transform":"translateX(40px)"});
+	
+			}
+
 		}
+
+		
 		
 
 		for(var i = 0; i < names[0].length; i++){
@@ -196,6 +241,8 @@ switch(path){
 
 	//rooms Page
 	case 'rooms' :
+		videoControl(video);
+
 		$("body").addClass("rooms_" + numbering(detailPath));
 		$.getJSON('http://digitalnow.co.kr/reserve/pensionInfo/'+ account +'/8',
 		function(data){
@@ -294,6 +341,8 @@ switch(path){
 
 	//special Page
 	case 'special' :
+		videoControl(video);
+
 		$.getJSON('http://digitalnow.co.kr/reserve/pensionInfo/'+ account +'/9',
 		function(data){ 
 			//Order Number Sort
@@ -464,7 +513,7 @@ switch(path){
 			'</div>' +
 			'<div id="ft-cont">' +
 				'<div class="InBox">' +
-					'<h5><a href="index.html"><img src="images/logo.svg" width="188" height="197" alt="" /></a></h5>' +
+					'<h5><a href="index.html"><img src="images/logo.svg" width="100%" height="auto" alt="" /></a></h5>' +
 					'<ul class="address">' +
 						'<li>예약문의<span>'+ USER_TEL1 +'</span></li>' +
 						'<li>'+ NEW_USER_ADDR +' <span>('+ USER_ADDR +')</span></li>' +

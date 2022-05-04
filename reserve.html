@@ -1,14 +1,9 @@
-<?
-$userAgent = $_SERVER['HTTP_USER_AGENT'];
-if (preg_match("/iPhone|iPad|Mobile|UP.Browser|Android|BlackBerry|Windows CE|Nokia|webOS|Opera Mini|SonyEricsson|opera mobi|Windows Phone|IEMobile|POLARIS/", $userAgent) != false){
-    echo "<script>document.location.replace('m/reserve.html?reserve=rv');</script>";
-}
-?>
-
 <!DOCTYPE html>
 <html lang="ko" data-useragent="">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <? include "agent/keywords.html" ?>
 
 <link rel="shortcut icon" href="/favicon.ico">
@@ -48,7 +43,7 @@ if (preg_match("/iPhone|iPad|Mobile|UP.Browser|Android|BlackBerry|Windows CE|Nok
 				</ul>
 
 				<div class="frame frame_01">
-					<iframe src="http://digitalnow.co.kr/reserve/calendarv1/inolteo" width='100%' height='1300' frameborder="0"></iframe>
+					<iframe src="http://digitalnow.co.kr/reserve/calendarv2/hellokids" width='100%' height='1800' frameborder="0"></iframe>
 				</div>
 				
 				<div class="frame frame_02">

@@ -1,15 +1,8 @@
-<?
-$userAgent = $_SERVER['HTTP_USER_AGENT'];
-if (preg_match("/iPhone|iPad|Mobile|UP.Browser|Android|BlackBerry|Windows CE|Nokia|webOS|Opera Mini|SonyEricsson|opera mobi|Windows Phone|IEMobile|POLARIS/", $userAgent) != false){
-    echo "<script>document.location.replace('m/community.html?table=notice');</script>";
-}
-?>
-
-
 <!DOCTYPE html>
 <html lang="ko" data-useragent="">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <? include "agent/keywords.html" ?>
 
 <link rel="shortcut icon" href="/favicon.ico">

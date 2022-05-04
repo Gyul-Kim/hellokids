@@ -4,11 +4,13 @@
 
 /*------------------------------------------------------------------------------------------------*/
 /* Image */
-#index #Mov .MyFrame iframe                         {background-image:url(http://gonylab7.speedgabia.com/inolter/thumb/1.jpg);}
-#about #visual .MyFrame iframe                      {background-image:url(http://gonylab7.speedgabia.com/inolter/thumb/2.jpg);}
+#index #Mov .MyFrame iframe                         {background-image:url(http://gonylab8.speedgabia.com/hellokids/thumbnail/main.jpg);}
+#about #visual .MyFrame iframe                      {background-image:url(http://gonylab8.speedgabia.com/hellokids/thumbnail/about.jpg);}
+#rooms #visual .MyFrame iframe                      {background-image:url(http://gonylab8.speedgabia.com/hellokids/thumbnail/rooms.jpg);}
+#special #visual .MyFrame iframe                      {background-image:url(http://gonylab8.speedgabia.com/hellokids/thumbnail/special.jpg);}
 
-#reserve #Banner                                    {background-image:url(http://gonylab7.speedgabia.com/inolter/banner/2.jpg);}
-#community #Banner                                  {background-image:url(http://gonylab7.speedgabia.com/inolter/banner/3.jpg);}
+#reserve #Banner                                    {background-image:url(http://gonylab8.speedgabia.com/hellokids/banner/1.jpg);}
+#community #Banner                                  {background-image:url(http://gonylab8.speedgabia.com/hellokids/banner/2.jpg);}
 
 /*------------------------------------------------------------------------------------------------*/
 /* Common */
@@ -36,10 +38,10 @@ section,.section					                {position:relative;width:100%;}
 #Banner .InBox .ttls strong                         {display:block;font-size:75px;margin:15px 0 0 0;letter-spacing:5px;}
 
 /* Visual */
-#visual                                             {position:relative;width:100%;height:95vh;min-height:600px;}
+#visual                                             {position:relative;width:100%;height:100vh;min-height:600px;}
 #visual                                             {background-repeat:no-repeat;background-position:50% 50%;background-size:cover;}
 #visual:before                                      {position:absolute;top:0;left:0;width:100%;height:100%;content:"";display:block;opacity:0.1;background:#000;z-index:1;}
-#visual .InBox                                      {position:relative;width:100%;height:100%;overflow:hidden;}
+#visual .InBox                                      {position:absolute;width:100%;height:100%;overflow:hidden; top:0;}
 #visual .InBox .ttls                                {position:absolute;top:50%;left:5%;height:110px;margin-top:-42.5px;color:#fff;z-index:1;}
 #visual .InBox .ttls div                            {display:inline-block;width:100px;border-top:1px solid #fff;padding-top:7px;margin-right:15px;}
 #visual .InBox .ttls span                           {font-size:25px;}
@@ -91,7 +93,7 @@ header                                              {position:fixed;top:0;left:0
 hgroup                                              {position:relative;width:100%;height:75px;background:#fff;border-bottom:1px solid #e8e8e8;overflow:visible;}
 hgroup #lnb                                         {float:left;width:35%;height:75px;}
 hgroup #lnb .InBox                                  {width:100%;height:75px;overflow:visible;}
-hgroup #lnb .InBox h1                               {width:25%;float:left;text-align:center; padding:20px 0 20px 20px;}
+hgroup #lnb .InBox h1                               {width:128px; height:32px; float:left;text-align:center; padding:20px 0 20px 20px;}
 hgroup #lnb .InBox ul                               {float:left;width:70%;overflow:hidden;}
 hgroup #lnb .InBox ul li                            {float:left;width:30%;}
 hgroup #lnb .InBox ul li:nth-of-type(2)             {width:40%;}
@@ -108,6 +110,7 @@ hgroup #rnb .InBox ul li:last-child                 {background:none;}
 hgroup #rnb .InBox ul li a                          {padding:31px 0;text-align:center;font-size:14px;color:#8b8b8b;}	
 hgroup #rnb .InBox ul li a:hover                    {color:#2a3e42;}
 hgroup .book                                        {position:absolute;top:14px;right:10px;}
+hgroup .book a img {display:block; width:183px; height:47px;}
 
 nav                                                 {position:fixed;top:75px;left:0;width:100%;height:0;overflow:hidden;transition:0.5s;z-index:-1;}
 nav:before                                          {position:absolute;top:0;left:0;width:100%;height:calc(100% - 2px);content:"";display:block;opacity:0.75;z-index:1;}
@@ -144,7 +147,7 @@ nav .nav_img                                        {width:20%;position:absolute
 #IdxMenu                                            {position:fixed;top:0;left:0;width:100%;height:76px;overflow:visible;transform: translateY(0);transition:0.6s;z-index:100;}
 #IdxMenu .lnb                                       {float:left;width:35%;height:75px;}
 #IdxMenu .lnb .InBox                                {width:100%;height:75px;overflow:visible;padding-left:20px;}
-#IdxMenu .lnb .InBox h1                             {width:25%;float:left;text-align:center; padding:20px 0;}
+#IdxMenu .lnb .InBox h1                             {width:128px; height:32px; float:left;text-align:center; padding:20px 0;}
 #IdxMenu .lnb .InBox ul                             {float:left;width:70%;overflow:hidden;}
 #IdxMenu .lnb .InBox ul li                          {float:left;width:30%;}
 #IdxMenu .lnb .InBox ul li:nth-of-type(2)           {width:40%;}
@@ -164,6 +167,7 @@ nav .nav_img                                        {width:20%;position:absolute
 #IdxMenu a                                          {display:block;}
 #IdxMenu .book                                      {position:absolute;top:14px;right:10px;transition:0.3s;}
 #IdxMenu .book:hover                                {opacity:0.8;}
+#IdxMenu .book a img {display:block; width:183px; height:47px;}
 
 header .sns                                         {position:absolute;top:90px;right:10px;z-index:10;}
 header .sns li                                      {display:inline-block;}
@@ -483,17 +487,221 @@ header a,footer a 				                    {display:block;}
 #reserve .frame_02 .r_info_03 table {line-height:1.5em;margin-top:20px;}
 #reserve .frame_02 .r_info_03 table > thead {background:#f2f2f2;}
 
-@media(max-width:768px) {
+@media(max-width:1024px) {
+    hgroup #lnb, #IdxMenu .lnb {width:50%;}
+    hgroup #lnb .InBox ul, #IdxMenu .lnb .InBox ul {width:calc(63% - 20px); margin-left:20px;}
+    hgroup #lnb .InBox ul li a, #IdxMenu .lnb .InBox ul li a {font-size:13px;}
+    hgroup #rnb .InBox ul li a, #IdxMenu .rnb .InBox ul li a {font-size:12px;}
+    hgroup #rnb, #IdxMenu .rnb {width:30%}
 
+    nav .nav_img {bottom:unset; width:25%; top:50px;}
+    nav > div .ttls strong {font-size:25px;}
+
+    #visual {height:95vh;}
+    .MyFrame {height:95vh;}
+
+    #index #Mov h2 span {margin: 10px 0 10px 15px; font-size:16px;}
+    #index #Mov h2 strong {font-size:40px;}
+
+    .Swipers .InBox {height:60vh;}
+    .detail .contents .infos {padding-bottom:50px;}
+    .detail .contents .infos .InBox {width:45%; margin:7.5% 2%;}
+    .detail .notices h3 strong {font-size:27px;}
+
+    #rooms .contents .infos .InBox > h3 {font-size:23px; margin-bottom:30px;}
+    #rooms .contents .infos .InBox > ul > li span {font-size:15px;}
+    #rooms .room_menu .InBox {padding-left:25px;}
+    #rooms .room_menu .InBox .txt span {font-size:20px;}
+
+    #Banner .InBox .ttls span {font-size:20px;}
+    #Banner .InBox .ttls strong {font-size:50px;}
+    .tables .contents .frame h3 {font-size:25px;}
     
+    footer #ft-menu .InBox > ul li {width:18%;}
+    footer #ft-cont .address > li {font-size:15px;}
+    footer #ft-cont .address > li span {display:block;}
+
+}
+
+
+@media(max-width:768px) {
+    #index #Mov .MyFrame iframe                         {background-image:url(http://gonylab8.speedgabia.com/hellokids/m/thumbnail/main.jpg); background-size:contain;}
+    #about #visual .MyFrame iframe                      {background-image:url(http://gonylab8.speedgabia.com/hellokids/m/thumbnail/about.jpg); background-size:contain;}
+    #rooms #visual .MyFrame iframe                      {background-image:url(http://gonylab8.speedgabia.com/hellokids/m/thumbnail/rooms.jpg); background-size:contain;}
+    #special #visual .MyFrame iframe                      {background-image:url(http://gonylab8.speedgabia.com/hellokids/m/thumbnail/special.jpg); background-size:contain;}
+
+    #reserve #Banner                                    {background-image:url(http://gonylab8.speedgabia.com/hellokids/m/banner/1.jpg); background-size:contain;}
+    #community #Banner                                  {background-image:url(http://gonylab8.speedgabia.com/hellokids/m/banner/2.jpg); background-size:contain;}
+
+    hgroup {height:85px;}
+    hgroup #rnb, #IdxMenu .rnb {height:30px; width:40%;}
+    hgroup #rnb .InBox ul li, #IdxMenu .rnb .InBox ul li {width:33.33%;}
+    hgroup #rnb .InBox ul li:nth-of-type(2), #IdxMenu .rnb .InBox ul li:nth-of-type(2) {width:33.33%;}
+    hgroup #rnb .InBox ul li a, #IdxMenu .rnb .InBox ul li a {padding:17px 0;}
+    hgroup #lnb, #IdxMenu .lnb {width:38%;}
+    hgroup #lnb .InBox ul, #IdxMenu .lnb .InBox ul {position:absolute; top:40px; right:4%;}
+    hgroup .book {top:11px;}
+    hgroup .book a img, #IdxMenu .book a img {width:15vw; height:auto;}
+    hgroup #lnb .InBox ul li, #IdxMenu .lnb .InBox ul li {width:30%;}
+    hgroup #lnb .InBox ul li a, #IdxMenu .lnb .InBox ul li a {font-size:13px; padding:17px 0;}
+    hgroup #rnb .InBox ul li a, #IdxMenu .rnb .InBox ul li a  {font-size:13px;}
+    hgroup #lnb .InBox h1, #IdxMenu .lnb .InBox h1 {width:30vw; padding:29px 0 28px 20px;}
+    #IdxMenu .lnb .InBox {padding-left:0;}
+
+    nav {top:85px;}
+    nav > div .ttls {margin:55px 0 0 0; width:48%; padding-left:1%;}
+    nav > div .ttls strong {font-size:25px;}
+    nav > div .menus {width:48%; position: relative; margin-top:50px;}
+    nav > div .menus > ul li a span {font-size:17px;}
+    nav > .gb01 .menus > ul li a span.en {width:80px; font-size:14px;}
+    nav > .gb01 .menus > ul li a span.ko {font-size:14px;}
+    nav > :not(.gb01) .ttls {width:35%;}
+    nav > :not(.gb01) .menus {width:60%;}
+    nav > :not(.gb01) .menus > ul li a span.en {width:150px;}
+    nav .nav_img {right:unset; bottom:30%; width:90px; padding-left:9%; top:unset; display:none}
+    nav .gb01 .nav_img {bottom:25%; ;}
+
+    .Slides {height:650px;}
+    .MyFrame {height:650px;}
+    .Swipers .InBox {min-height:unset; height:50vh;}
+    #index #Mov h2 {width:80%; height:150px;}
+    #index #Mov h2 span {font-size:16px;}
+    #index #Mov h2 strong {font-size:32px;}
+
+    #index .Swipers .InBox {min-height:unset; height:340px; width:95%; margin:0 auto;}
+    #index .contents h3 div {width:18px; top:30%;}
+    #index .contents h3 strong {font-size:12px;}
+    #index .contents p {margin:1.5% 0 0 1%;}
+    #index .contents p span {font-size:23px;}
+    #index .gallerys .InBox ul li {min-height:unset;}
+    #index .gallerys .InBox ul li a div.txt {opacity:1;}
+    #index .gallerys .InBox ul li a div.img::before {opacity:0.5;}
+    #index .Vimeos .Layout .InBox {width:95%; margin:0 auto;}
+    #index .Vimeos .vid_bg {bottom:1%;}
+    #index .gallerys .InBox ul li a div.txt span {font-size:13px;}
+    #index .gallerys .InBox ul li a div.txt strong {font-size:15px;}
+
+
+    #visual .InBox .ttls span {font-size:16px;}
+    #visual .InBox .ttls strong {font-size:30px;}
+    #visual {height:560px;}
+    .MyFrame {height:600px;}
+
+    #about .contents > div .title h3 {font-size:30px;}
+    #about .contents > div .title p {font-size:13px;}
+    #about .contents > div:nth-of-type(1) .title {width:75%; height:200px; padding:7% 7.5%;}
+    #about .cont01 .swiper-view {width:500px; margin:80px auto 0;}
+    #about .cont01 .swiper-view .InBox {height:300px; min-height:300px;}
+    
+
+    #about .contents > div .title h3 {font-size:30px;}
+    #about .contents > div .title p {font-size:10px;}
+    #about #location {margin:5% 0;}
+
+    #rooms .contents .infos .InBox > ul > li {font-size:12px;}
+    #rooms .contents .infos .InBox > ul > li span {font-size:12px;}
+    #rooms .contents .infos .InBox > ul > li ul.eq {font-size:12px;}
+
+    .detail .contents .infos {height:600px;}
+
+    footer #ft-menu .InBox > ul li a {font-size:13px;}
+    footer #ft-cont .address > li span {font-size:13px;}
+    footer #ft-cont .copy {width:95%; margin:50px auto 0;}
+    footer #ft-cont .copy {font-size:13px;}
+    footer #ft-cont .InBox h5 {display:none;}
+    footer #ft-cont .address {float: left; text-align: left; margin-left:20px; margin-right:unset; }
+    footer #ft-cont .address > li {line-height:2;}
+    footer #ft-cont .address > li > ul.sns {float: left;}
+    footer #ft-cont .address > li span {margin-left:unset;}
+    footer #ft-menu .InBox > ul li {width:33.33%;}
+    footer #ft-menu .InBox > ul li:nth-child(4), footer #ft-menu .InBox > ul li:last-child {width:50%;}
+    footer #ft-menu .InBox > .ft-rbtn {width:150px; padding:23px 0;}
+    
+    .tables .contents .snb {width:450px;}
+    .tables .contents .snb li a {font-size:15px; padding:7px 0;}
+    .tables .contents .frame h3 {font-size:26px;}
+    #Banner .InBox .ttls span {font-size:18px;}
+    #Banner .InBox .ttls strong {font-size:40px;}
+
+
 }
 
 @media(max-width:480px) {
-    
+    nav > div .ttls strong {font-size:20px; line-height:2;}
+    nav div .nav_img {display:none;}
+    hgroup .book, #IdxMenu .book {top:13px;}
+    hgroup .book a img, #IdxMenu .book a img {width:19.5vw;}
+
+    nav > .gb01 .menus > ul li a span.ko {font-size:14px;}
+    nav > :not(.gb01) .ttls {width:35%;}
+    nav > :not(.gb01) .menus {width:60%;}
+    nav > :not(.gb01) .menus > ul li a span.ko {font-size:13px;}
+    nav > :not(.gb01) .menus > ul li a span.en {width:122px; font-size:13px;}
+
+    #index #Mov h2 div {width:50px;}
+    #index #Mov h2 span {font-size:13px;}
+    #index #Mov h2 strong {font-size:22px;}
+    .Slides, .MyFrame {height:560px;}
+    #visual {min-height:unset;}
+
+    #index .Swipers .InBox {height:250px;}
+    #index .contents p {height:40px; margin:1.5% 0 0 1%;}
+    #index .Vimeos .Layout .InBox {width:95%; margin:0 auto;}
+    #index .gallerys .InBox ul li {min-height:unset;}
+
+    #about .Swipers .swiper-btn {bottom:0;}
+    #about .Swipers .swiper-btn {width:40px; height:48px;}
+    #about .Swipers .swiper-button-next {left:calc(5% + 38px);}
+    #about .Swipers .swiper-pagination {left:calc(5% + 90px);}
+    #about .contents > div:nth-of-type(2) .title {width:70%;}
+    #about .contents > div .title h3 {font-size:20px;}
+    #about .contents > div .title p strong {font-size:11px;}
+    #about .contents > div .title p span {font-size:11px;}
+    #about .cont02 .location iframe {height:350px;}
+
+    .detail .contents .infos {height:100%; overflow:hidden;}
+    .detail .contents .infos .InBox {width:85%; margin:6% 7%;}
+    .detail .notices h3 span {font-size:15px;}
+    .detail .notices h3 strong {font-size:18px; margin:10px 0;}
+    .detail .contents .infos {padding-bottom:30px;}
+    .detail .notices p {font-size:12.5px;}
+
+    .Swipers .swiper-view {width:95%;}
+    .Swipers .InBox {height:28vh;}
+    .Swipers .swiper-btn {width:40px; height:95px; margin-top:0; transform:translateY(-50%);}
+    .Swipers .swiper-pagination {width:90%; left:50%; transform:translateX(-50%);} 
+
+    #rooms .contents .infos .InBox > h3 {font-size:17.5px; margin-bottom: 15px;}
+    #rooms .contents .infos .InBox > ul > li span {width:75px;}
+    #rooms .contents .infos .InBox > ul > li span.tx {width:calc(95% - 75px);}
+    #rooms .contents .infos .InBox > ul > li ul.eq {width:calc(95% - 75px);}
+    #rooms .contents .infos .InBox > ul {margin:3% 0 7% 0;}
+    #rooms .room_menu .InBox .txt span {font-size:17px;}
+    #rooms .room_menu .InBox .txt b, #special .special_menu .InBox .txt b {margin-top:15px; margin-left:0; display:block; font-size:12.5px;}
+    #rooms .room_menu .InBox {padding:0 12px;}
+    #rooms .contents .infos .InBox > ul > li {font-size:11px;}
+
+    #special .special_menu .InBox .txt span {font-size:15px;}
+    #special .special_menu .InBox {padding-left:20px;}
+    .tables .contents .snb {width:400px;}
+    .tables .contents .frame h3 {font-size:23px;}
+
+    #Banner .InBox .ttls span {font-size:16px;}
+    #Banner .InBox .ttls strong {font-size:30px;} 
+    #reserve .frame_02 ul li {font-size:11.5px;}
+    #reserve .frame_02 table tr th, #reserve .frame_02 table tr td {font-size:10.5px;}
     
 }
 
-@media(max-width:320px) {
-    
-    
+@media(max-width:360px) {
+    #index #Mov h2 span {font-size:13px;}
+    #index #Mov h2 strong {font-size:20px;}
+    #index .contents h3 strong {font-size:10.5px;}
+    #index .contents p span {font-size:20px;}
+    nav > .gb01 .menus > ul li a span.en {font-size:11px;}
+    nav > .gb01 .menus > ul li a span.ko {font-size:11px;}
+    nav > div .ttls strong {font-size:18px;}
+
+    hgroup #rnb .InBox ul li a, #IdxMenu .rnb .InBox ul li a {font-size:11px;}
+    .tables .contents .snb {width:300px;}
 }
