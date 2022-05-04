@@ -504,7 +504,7 @@ header a,footer a 				                    {display:block;}
     #index #Mov h2 strong {font-size:40px;}
 
     .Swipers .InBox {height:60vh;}
-    .detail .contents .infos {padding-bottom:50px;}
+    .detail .contents .infos {margin-bottom:50px;}
     .detail .contents .infos .InBox {width:45%; margin:7.5% 2%;}
     .detail .notices h3 strong {font-size:27px;}
 
@@ -602,7 +602,7 @@ header a,footer a 				                    {display:block;}
     #rooms .contents .infos .InBox > ul > li span {font-size:12px;}
     #rooms .contents .infos .InBox > ul > li ul.eq {font-size:12px;}
 
-    .detail .contents .infos {height:600px;}
+    .detail .contents .infos {height:100%; overflow: hidden;}
 
     footer #ft-menu .InBox > ul li a {font-size:13px;}
     footer #ft-cont .address > li span {font-size:13px;}
@@ -624,6 +624,20 @@ header a,footer a 				                    {display:block;}
     #Banner .InBox .ttls strong {font-size:40px;}
 
 
+
+@media(max-width:680px) {
+    #rooms .contents .infos .InBox > h3 {font-size:17.5px; margin-bottom: 15px;}
+    #rooms .contents .infos .InBox > ul > li span {width:75px;}
+    #rooms .contents .infos .InBox > ul > li span.tx {width:calc(95% - 75px);}
+    #rooms .contents .infos .InBox > ul > li ul.eq {width:calc(95% - 75px);}
+    #rooms .contents .infos .InBox > ul {margin:3% 0 7% 0;}
+    #rooms .room_menu .InBox .txt span {font-size:17px;}
+    #rooms .room_menu .InBox .txt b, #special .special_menu .InBox .txt b {margin-top:15px; margin-left:0; display:block; font-size:12.5px;}
+    #rooms .room_menu .InBox {padding:0 12px;}
+    #rooms .contents .infos .InBox > ul > li {font-size:11px;}
+
+    #special .special_menu .InBox .txt span {font-size:15px;}
+    #special .special_menu .InBox {padding-left:20px;}
 }
 
 @media(max-width:480px) {
@@ -671,18 +685,6 @@ header a,footer a 				                    {display:block;}
     .Swipers .swiper-btn {width:40px; height:95px; margin-top:0; transform:translateY(-50%);}
     .Swipers .swiper-pagination {width:90%; left:50%; transform:translateX(-50%);} 
 
-    #rooms .contents .infos .InBox > h3 {font-size:17.5px; margin-bottom: 15px;}
-    #rooms .contents .infos .InBox > ul > li span {width:75px;}
-    #rooms .contents .infos .InBox > ul > li span.tx {width:calc(95% - 75px);}
-    #rooms .contents .infos .InBox > ul > li ul.eq {width:calc(95% - 75px);}
-    #rooms .contents .infos .InBox > ul {margin:3% 0 7% 0;}
-    #rooms .room_menu .InBox .txt span {font-size:17px;}
-    #rooms .room_menu .InBox .txt b, #special .special_menu .InBox .txt b {margin-top:15px; margin-left:0; display:block; font-size:12.5px;}
-    #rooms .room_menu .InBox {padding:0 12px;}
-    #rooms .contents .infos .InBox > ul > li {font-size:11px;}
-
-    #special .special_menu .InBox .txt span {font-size:15px;}
-    #special .special_menu .InBox {padding-left:20px;}
     .tables .contents .snb {width:400px;}
     .tables .contents .frame h3 {font-size:23px;}
 
@@ -698,8 +700,8 @@ header a,footer a 				                    {display:block;}
     #index #Mov h2 strong {font-size:20px;}
     #index .contents h3 strong {font-size:10.5px;}
     #index .contents p span {font-size:20px;}
-    nav > .gb01 .menus > ul li a span.en {font-size:11px;;}
-    nav > .gb01 .menus > ul li a span.ko {font-size:11px;;}
+    nav > .gb01 .menus > ul li a span.en {font-size:11px;}
+    nav > .gb01 .menus > ul li a span.ko {font-size:11px;}
     nav > div .ttls strong {font-size:18px;}
 
     hgroup #rnb .InBox ul li a, #IdxMenu .rnb .InBox ul li a {font-size:11px;}
