@@ -202,7 +202,7 @@ switch(path){
 			for(var i=0; i < img[1]; i++){
 				$(".cont01 .swiper-image").append(
 					'<div class="swiper-slide">' +
-						'<div style="background-image:url('+ url +'/about/'+ (i + 1) +'.jpg)"></div>' +
+						'<div style="background-image:url('+ url +'/exterior/'+ (i + 1) +'.jpg)"></div>' +
 					'</div>'
 				);
 			} 
@@ -326,7 +326,7 @@ switch(path){
 			for(var i = 0; i < img[2].length; i++){
 				$(".room_menu .roomLists").append(
 					'<div class="swiper-slide">' + 
-						'<a href="rooms.html?num='+ numbering(i) +'"><div class="txt"><span>' + names[1][i]  + '</span><b>'+ names[0][i] + '</b></div><div class="img"><img src="' + url + '/room/0/' + ( i + 1) + '.jpg' + '"alt="/" width="100%" height="auto"></div></a>' +
+						'<a href="rooms.html?num='+ numbering(i) +'"><div class="txt"><span>' + names[1][i]  + '</span><b>'+ names[0][i] + '</b></div><div class="img"><img src="' + url + '/room/' + ( i + 1) + '/1.jpg' + '"alt="/" width="100%" height="auto"></div></a>' +
 					'</div>' 
 				);	
 			} Swipers02(".room_menu", 2, false, 40, false);
@@ -393,13 +393,18 @@ switch(path){
 					'<div class="swiper-slide">' + 
 						'<a href="special.html?num='+ numbering(i) +'">' +
 							'<div class="txt"><span>'+ specialList[i]["TITLE_EN"] +'</span><b>'+ specialList[i]["TITLE_KR"] +'</b></div>' +
-							'<div class="img"><img src="'+ url +'/special/0/'+ (i + 1) +'.jpg" width="100%" height="auto" /></div>' +
+							'<div class="img"><img src="'+ url +'/special/' +  (i + 1) +'/1.jpg" width="100%" height="auto" /></div>' +
 						'</a>' +
 					'</div>' 
 				);
 			} 
 			
 			Swipers02(".special_menu", 2.25, false, 40, false);
+
+			$("#special .special_menu .swiper-slide a .img img").css("height",$("#special .special_menu .swiper-slide a .img img").width() / 5 * 5);
+			$(window).on("resize", function() {
+				$("#special .special_menu .swiper-slide a .img img").css("height",$("#special .special_menu .swiper-slide a .img img").width() / 5 * 5);	
+			});
 
 		});	
 	break;
@@ -437,13 +442,16 @@ switch(path){
 				$(".frame h3 strong").text("공지사항");
 				$(".frame h3 span").text("공지사항과 다양한 소식을 확인해보세요.");
 				$(".frame iframe").attr("src","/board/bbs/board.php?bo_table=notice");
+				$("#community #Banner").css("background-image","url(http://gonylab8.speedgabia.com/hellokids/banner/1.jpg)");
+
 			}else if(nb == 1){
 				$("#Banner .ttls b").text("Q&A");
 				$("#Banner .ttls strong").text("Q&A");
 			
 				$(".frame h3 strong").text("문의사항");
 				$(".frame h3 span").text("헬로키즈에 무엇이든 물어보세요.");
-				$(".frame iframe").attr("src","/board/bbs/board.php?bo_table=qna");
+				$("#community #Banner").css("background-image","url(http://gonylab8.speedgabia.com/hellokids/banner/2.jpg)");
+
 			} return false;
 		});
 	break;

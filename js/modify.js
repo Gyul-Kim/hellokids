@@ -34,17 +34,16 @@ let names = [
 /* 이미지 - Number */
 let img = [
 	//index
-	[15],
+	[12],
 	//exterior  
-	[5],
+	[10],
 	//rooms
 	[
-		20,20
+		19,19
 	],
 	//special
 	[
-		4,3,6,6,5,
-		2
+		5,5,2,6,3
 	],
 ];
 

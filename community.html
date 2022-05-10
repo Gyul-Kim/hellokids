@@ -63,6 +63,9 @@
 				$(".frame h3 strong").text("공지사항");
 				$(".frame h3 span").text("공지사항과 다양한 소식을 확인해보세요.");
 				$(".frame iframe").attr("src","/board/bbs/board.php?bo_table=notice");
+				$("#community #Banner").css("background-image","url(http://gonylab8.speedgabia.com/hellokids/banner/1.jpg)");
+
+
 			
 			<? }else if($_GET['table']=='qna'){ ?>
 				$(".section .snb > li").removeClass("active"); 
@@ -72,7 +75,10 @@
 			
 				$(".frame h3 strong").text("문의사항");
 				$(".frame h3 span").text("헬로키즈에 무엇이든 물어보세요.");
-				$(".frame iframe").attr("src","/board/bbs/board.php?bo_table=qna");		
+				$(".frame iframe").attr("src","/board/bbs/board.php?bo_table=qna");
+				$("#community #Banner").css("background-image","url(http://gonylab8.speedgabia.com/hellokids/banner/2.jpg)");
+
+
 			<? } ?>
 		});
 	</script>

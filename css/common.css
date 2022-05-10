@@ -9,9 +9,7 @@
 #rooms #visual .MyFrame iframe                      {background-image:url(http://gonylab8.speedgabia.com/hellokids/thumbnail/rooms.jpg);}
 #special #visual .MyFrame iframe                      {background-image:url(http://gonylab8.speedgabia.com/hellokids/thumbnail/special.jpg);}
 
-#reserve #Banner                                    {background-image:url(http://gonylab8.speedgabia.com/hellokids/banner/1.jpg);}
-#community #Banner                                  {background-image:url(http://gonylab8.speedgabia.com/hellokids/banner/2.jpg);}
-
+#reserve #Banner                                    {background-image:url(http://gonylab8.speedgabia.com/hellokids/banner/3.jpg);}
 /*------------------------------------------------------------------------------------------------*/
 /* Common */
 body                                                {width:100%;}
@@ -525,13 +523,13 @@ header a,footer a 				                    {display:block;}
 
 
 @media(max-width:768px) {
-    #index #Mov .MyFrame iframe                         {background-image:url(http://gonylab8.speedgabia.com/hellokids/m/thumbnail/main.jpg); background-size:contain;}
-    #about #visual .MyFrame iframe                      {background-image:url(http://gonylab8.speedgabia.com/hellokids/m/thumbnail/about.jpg); background-size:contain;}
-    #rooms #visual .MyFrame iframe                      {background-image:url(http://gonylab8.speedgabia.com/hellokids/m/thumbnail/rooms.jpg); background-size:contain;}
-    #special #visual .MyFrame iframe                      {background-image:url(http://gonylab8.speedgabia.com/hellokids/m/thumbnail/special.jpg); background-size:contain;}
+    #index #Mov .MyFrame iframe                         {background-image:url(http://gonylab8.speedgabia.com/hellokids/m/thumbnail/main.jpg); background-size:cover;}
+    #about #visual .MyFrame iframe                      {background-image:url(http://gonylab8.speedgabia.com/hellokids/m/thumbnail/about.jpg); background-size:cover;}
+    #rooms #visual .MyFrame iframe                      {background-image:url(http://gonylab8.speedgabia.com/hellokids/m/thumbnail/rooms.jpg); background-size:cover;}
+    #special #visual .MyFrame iframe                      {background-image:url(http://gonylab8.speedgabia.com/hellokids/m/thumbnail/special.jpg); background-size:cover;}
 
-    #reserve #Banner                                    {background-image:url(http://gonylab8.speedgabia.com/hellokids/m/banner/1.jpg); background-size:contain;}
-    #community #Banner                                  {background-image:url(http://gonylab8.speedgabia.com/hellokids/m/banner/2.jpg); background-size:contain;}
+    #reserve #Banner                                    {background-image:url(http://gonylab8.speedgabia.com/hellokids/m/banner/1.jpg); background-size:cover;}
+    #community #Banner                                  {background-image:url(http://gonylab8.speedgabia.com/hellokids/m/banner/2.jpg); background-size:cover;}
 
     hgroup {height:85px;}
     hgroup #rnb, #IdxMenu .rnb {height:30px; width:40%;}
